@@ -37,6 +37,9 @@ h3, .download-title, .download-content.mobile,  .download-content.desktop {
     justify-content: center;
     justify-content: space-between;
   }
+  ..download-content.desktop {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
  .logos{
