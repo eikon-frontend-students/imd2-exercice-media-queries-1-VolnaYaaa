@@ -6,13 +6,56 @@
 
 body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  
 }
 
 a {
   color: inherit;
 }
 
-img,
-video {
+.logo {
+  width: 100px;
+  height: auto;
+}
+.logos {
+display: flex;
+}
+h3, .download-title, .download-content.mobile,  .download-content.desktop {
   display: block;
+  text-align: center;
+}
+@media (max-width: 992px) {
+	.description-title {
+		text-align: center;
+	} 
+  .description-content{
+    text-align: center;
+  }
+  .logos{
+    justify-content: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 576px) {
+ .logos{
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (min-width: 972px) {
+  .description-title {
+		text-align:left ;
+	} 
+  .description-content{
+    text-align: left;
+  }
+  .logos{
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .download-content.mobile {
+    display: none;
+  }
 }
